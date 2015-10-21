@@ -1,3 +1,8 @@
+module Types  ( Tree(Leaf, Node)
+              , Bit(L, R)
+              , HCode
+              , Table) where
+
 data Bit = L | R deriving (Eq, Show)
 
 type HCode = [Bit]
