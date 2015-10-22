@@ -1,5 +1,6 @@
-module Frequency (frequency)
+module Frequency (frequency) where
 
+mergeSort :: ([a] -> [a] -> [a]) -> [a] -> [a]
 mergeSort merge xs
   | length xs < 2     = xs
   | otherwise

@@ -1,12 +1,14 @@
 module Coding ( codeMessage
-              , decodeMessage)
+              , decodeMessage) where
 
 
 import Types (Tree(Leaf, Node), Bit(L, R), HCode, Table)
 
 
+codeMessage :: Table -> [Char] -> HCode
 codeMessage tbl = concat . map (lookupTable tbl)
 
+decodeMessage :: Tree -> HCode -> [Char]
 decodeMessage tr
   = decodeByt tr
     where
